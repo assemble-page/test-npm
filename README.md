@@ -1,29 +1,6 @@
 # test-npm
 
-## Project setup
-```
-npm install
-```
+除了正常的npm组件外，还需要将组件注册到数据库，所以
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+- 依赖注册工具 @assemble/register
+- 需要透出组件的属性 `./props.js`

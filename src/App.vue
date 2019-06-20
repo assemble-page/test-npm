@@ -1,28 +1,48 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div
+    class="test"
+    :class="{
+      'test__left': align === 'left',
+      'test__center': align === 'center',
+      'test__right': align === 'right'
+    }"
+  >
+    <div class="test__button">{{ text }}</div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
-  name: 'app',
-  components: {
-    HelloWorld
+  props: {
+    text: {
+      type: String,
+      default: '按钮文案'
+    },
+    align: {
+      type: String,
+      default: 'right'
+    }
   }
 }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="stylus">
+.test
+  display flex
+  &__left
+    justify-content flex-start
+  &__center
+    justify-content center
+  &__right
+    justify-content flex-end
+  &__button
+    display flex
+    justify-content center
+    align-items center
+    width 100px
+    height 40px
+    background-color aquamarine
+    border-radius 3px
+    color #fff
+    font-size 14px
 </style>
