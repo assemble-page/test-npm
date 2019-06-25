@@ -1,6 +1,6 @@
 {
   "name": "assemble-test",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "private": false,
   "main": "./src/App.vue",
   "postCompile": true,
@@ -8,7 +8,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "register": "assemble register 8081 xnpm"
+    "register": "assemble register 8081 npm"
   },
   "dependencies": {},
   "devDependencies": {

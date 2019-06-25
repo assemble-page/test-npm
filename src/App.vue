@@ -4,7 +4,8 @@
     :class="{
       'test__left': align === 'left',
       'test__center': align === 'center',
-      'test__right': align === 'right'
+      'test__right': align === 'right',
+      'test__margin': marginBottom
     }"
     @click="onClick()"
   >
@@ -27,7 +28,8 @@ export default {
     backgroundColor: {
       type: String,
       default: 'blue'
-    }
+    },
+    marginBottom: Boolean
   },
   methods: {
     onClick () {
@@ -44,6 +46,8 @@ export default {
 <style lang="stylus">
 .test
   display flex
+  &__margin
+    margin-bottom 20px
   &__left
     justify-content flex-start
   &__center

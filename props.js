@@ -23,5 +23,10 @@ module.exports = {
     type: 'code',
     label: '点击函数体',
     value: ''
+  },
+  marginBottom: {
+    type: 'checkbox',
+    label: '是否存在下边距',
+    value: false
   }
 }
