@@ -13,5 +13,15 @@ module.exports = {
       { label: '中', value: 'center' },
       { label: '右', value: 'right' }
     ]
+  },
+  backgroundColor: {
+    type: 'color',
+    label: '背景颜色',
+    value: 'blue'
+  },
+  clickBody: {
+    type: 'code',
+    label: '点击函数体',
+    value: ''
   }
 }

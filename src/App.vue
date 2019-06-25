@@ -6,8 +6,9 @@
       'test__center': align === 'center',
       'test__right': align === 'right'
     }"
+    @click="onClick()"
   >
-    <div class="test__button">{{ text }}</div>
+    <div class="test__button" :style="{ backgroundColor }">{{ text }}</div>
   </div>
 </template>
 
@@ -20,7 +21,21 @@ export default {
     },
     align: {
       type: String,
-      default: 'right'
+      default: 'left'
+    },
+    clickBody: String,
+    backgroundColor: {
+      type: String,
+      default: 'blue'
+    }
+  },
+  methods: {
+    onClick () {
+      if (this.clickBody) {
+        // eslint-disable-next-line
+        const fn = new Function(this.clickBody)
+        fn.call(this)
+      }
     }
   }
 }
@@ -41,7 +56,7 @@ export default {
     align-items center
     width 100px
     height 40px
-    background-color aquamarine
+    // background-color blue
     border-radius 3px
     color #fff
     font-size 14px

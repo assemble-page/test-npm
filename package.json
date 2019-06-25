@@ -1,29 +1,29 @@
 {
-  "name": "@assemble/test-npm",
-  "version": "0.1.1",
-  "private": true,
+  "name": "assemble-test",
+  "version": "0.1.3",
+  "private": false,
   "main": "./src/App.vue",
   "postCompile": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "register": "assemble register 8081 xnpm"
   },
-  "dependencies": {
-    "core-js": "^2.6.5",
-    "leancloud-storage": "^3.13.2",
-    "stylus": "^0.54.5",
-    "stylus-loader": "^3.0.2",
-    "vue": "^2.6.10"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.8.0",
     "@vue/cli-plugin-eslint": "^3.8.0",
     "@vue/cli-service": "^3.8.0",
     "@vue/eslint-config-standard": "^4.0.0",
+    "assemble-register": "^1.0.6",
     "babel-eslint": "^10.0.1",
+    "core-js": "^2.6.5",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2",
+    "vue": "^2.6.10",
     "vue-template-compiler": "^2.6.10"
   }
 }
